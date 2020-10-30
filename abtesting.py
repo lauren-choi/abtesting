@@ -234,6 +234,16 @@ a_t3_list = data_to_num_list(a3)
 b_t3_list = data_to_num_list(b3)
 print(get_t_score(a_t3_list, b_t3_list)) # this should be -2.88969
 print(perform_2_sample_t_test(a_t3_list, b_t3_list)) # this should be .005091
+
+print("----------")
+print("t-test values for AB testing:")
+
+a_t4_list = data_to_num_list(a4) 
+b_t4_list = data_to_num_list(b4)
+print(get_t_score(a_t4_list, b_t4_list))
+print(perform_2_sample_t_test(a_t4_list, b_t4_list))
+
+print("----------")
 """
 
 """
@@ -258,3 +268,14 @@ b_c3_list = data_to_num_list(b_count_3)
 c3_observed_grid = [a_c3_list, b_c3_list]
 print(chi2_value(c3_observed_grid)) # this should be .3119402
 print(perform_chi2_homogeneity_test(c3_observed_grid)) # this should be .57649202
+
+print("----------")
+print("chi2-test values for AB testing:")
+
+a_c4_list = data_to_num_list(a_count_4) 
+b_c4_list = data_to_num_list(b_count_4)
+c4_observed_grid = [a_c4_list, b_c4_list]
+print(chi2_value(c4_observed_grid)) 
+print(perform_chi2_homogeneity_test(c4_observed_grid)) 
+
+print("----------")
